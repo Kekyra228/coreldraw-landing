@@ -594,7 +594,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cloneItems.push(clone);
         });
 
-        // Определяем направление прокрутки: влево (-1) или вправо (1)
         let speed = track.classList.contains('gallery-bottom') ? 1 : -1;
         let position = 0;
 
@@ -605,7 +604,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const firstItem = track.querySelector('.gallery-item');
             const firstItemWidth = firstItem.getBoundingClientRect().width;
 
-            // Проверяем, когда нужно перемещать элементы для создания эффекта бесконечности
             if (position <= -firstItemWidth || position >= firstItemWidth) {
                 position = 0;  // Сбрасываем позицию для бесконечности
             }
